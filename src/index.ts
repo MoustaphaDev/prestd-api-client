@@ -1,10 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
 /**
 The `Tables`  generic represent the names of the tables in the database.
 
 The `resources` generic represent an union of the types of data contained in each tables in the database.
 */
-
-import type { User, Receiver, Driver, Bus } from '../../../utils/types';
 
 type TableName<T, Tables> = T extends Tables ? T : Tables;
 type Payload<resource> = Omit<resource, 'id'>;
