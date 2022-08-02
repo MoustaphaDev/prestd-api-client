@@ -1,5 +1,5 @@
 {
-  "name": "prestd-js-client",
+  "name": "prestd-api-client",
   "version": "0.0.0-development",
   "description": "A simple javascript client for the Prestd API generator",
   "main": "./lib/src/index.js",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MoustaphaDev/prestd-js-client.git"
+    "url": "git+https://github.com/MoustaphaDev/prestd-api-client.git"
   },
   "license": "MIT",
   "author": {
@@ -41,9 +41,9 @@
     "prestd-api-client"
   ],
   "bugs": {
-    "url": "https://github.com/MoustaphaDev/prestd-js-client/issues"
+    "url": "https://github.com/MoustaphaDev/prestd-api-client/issues"
   },
-  "homepage": "https://github.com/MoustaphaDev/prestd-js-client#readme",
+  "homepage": "https://github.com/MoustaphaDev/prestd-api-client#readme",
   "devDependencies": {
     "@MoustaphaDev/commitizen": "^4.2.8",
     "@MoustaphaDev/cz-conventional-changelog": "^3.3.4",
