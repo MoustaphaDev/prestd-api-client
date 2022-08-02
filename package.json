@@ -45,8 +45,8 @@
   },
   "homepage": "https://github.com/MoustaphaDev/prestd-api-client#readme",
   "devDependencies": {
-    "@MoustaphaDev/commitizen": "^4.2.8",
-    "@MoustaphaDev/cz-conventional-changelog": "^3.3.4",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^12.20.11",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
@@ -67,7 +67,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/@MoustaphaDev/cz-conventional-changelog"
+      "path": "./node_modules/cz-conventional-changelog"
     }
   },
   "lint-staged": {
