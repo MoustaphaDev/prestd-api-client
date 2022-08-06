@@ -46,7 +46,7 @@ export class PrestApiClient<
   Resources extends { [k in TableNames]: Resources[TableNames] }
 > {
   /**
-   * @param prestApiBaseUrl The base url of the prest api
+   * @param prestdApiBaseUrl The base url of the prest api
    * @param schema The name of the schema you want to access
    * @param databaseName The name of the database you want to access
 
@@ -84,11 +84,11 @@ export class PrestApiClient<
  */
 
   constructor(
-    private prestApiBaseUrl: string,
+    private prestdApiBaseUrl: string,
     private schema: string,
     private databaseName: string
   ) {
-    this.prestApiBaseUrl = prestApiBaseUrl;
+    this.prestdApiBaseUrl = prestdApiBaseUrl;
     this.databaseName = databaseName;
     this.schema = schema;
   }
@@ -101,7 +101,7 @@ export class PrestApiClient<
   ): Promise<Resources[typeof tableName]> {
     const response = await fetch(
       // @ts-ignore
-      `${this.prestApiBaseUrl}/${this.databaseName}/${this.schema}/${tableName}`
+      `${this.prestdApiBaseUrl}/${this.databaseName}/${this.schema}/${tableName}`
     );
     return await response.json();
   }
@@ -117,7 +117,7 @@ export class PrestApiClient<
   ): Promise<ExtractTypeofArray<Resources[typeof tableName]>> {
     const response = await fetch(
       // @ts-ignore
-      `${this.prestApiBaseUrl}/${this.databaseName}/${this.schema}/${tableName}/?id=${id}`
+      `${this.prestdApiBaseUrl}/${this.databaseName}/${this.schema}/${tableName}/?id=${id}`
     );
     return await response.json();
   }
@@ -133,7 +133,7 @@ export class PrestApiClient<
   ): Promise<ExtractTypeofArray<Resources[typeof tableName]>> {
     const response = await fetch(
       // @ts-ignore
-      `${this.prestApiBaseUrl}/${this.databaseName}/${this.schema}/${tableName}`,
+      `${this.prestdApiBaseUrl}/${this.databaseName}/${this.schema}/${tableName}`,
       {
         method: 'POST',
         body: JSON.stringify(data),
@@ -158,7 +158,7 @@ export class PrestApiClient<
   ): Promise<PutReturnType> {
     const response = await fetch(
       // @ts-ignore
-      `${this.prestApiBaseUrl}/${this.databaseName}/${this.schema}/${tableName}/?id=${id}`,
+      `${this.prestdApiBaseUrl}/${this.databaseName}/${this.schema}/${tableName}/?id=${id}`,
       {
         method: 'PUT',
         body: JSON.stringify(data),
@@ -181,7 +181,7 @@ export class PrestApiClient<
   ): Promise<DeleteReturnType> {
     const response = await fetch(
       // @ts-ignore
-      `${this.prestApiBaseUrl}/${this.databaseName}/${this.schema}/${tableName}?id=${id}`,
+      `${this.prestdApiBaseUrl}/${this.databaseName}/${this.schema}/${tableName}?id=${id}`,
       {
         method: 'DELETE',
       }
