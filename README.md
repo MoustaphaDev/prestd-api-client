@@ -1,4 +1,4 @@
-# prestd-js-client
+# prestd-api-client
 
 > Template to kickstart creating a Node.js module using TypeScript and VSCode
 
@@ -7,10 +7,10 @@ Inspired by [node-module-boilerplate](https://github.com/sindresorhus/node-modul
 ## Features
 
 - [Semantic Release](https://github.com/semantic-release/semantic-release)
-- [Issue Templates](https://github.com/MoustaphaDev/prestd-js-client/tree/main/.github/ISSUE_TEMPLATE)
-- [GitHub Actions](https://github.com/MoustaphaDev/prestd-js-client/tree/main/.github/workflows)
+- [Issue Templates](https://github.com/MoustaphaDev/prestd-api-client/tree/main/.github/ISSUE_TEMPLATE)
+- [GitHub Actions](https://github.com/MoustaphaDev/prestd-api-client/tree/main/.github/workflows)
 - [Codecov](https://about.codecov.io/)
-- [VSCode Launch Configurations](https://github.com/MoustaphaDev/prestd-js-client/blob/main/.vscode/launch.json)
+- [VSCode Launch Configurations](https://github.com/MoustaphaDev/prestd-api-client/blob/main/.vscode/launch.json)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Husky](https://github.com/typicode/husky)
 - [Lint Staged](https://github.com/okonet/lint-staged)
@@ -28,7 +28,7 @@ Inspired by [node-module-boilerplate](https://github.com/sindresorhus/node-modul
 Alternatively, create a new directory and then run:
 
 ```bash
-curl -fsSL https://github.com/MoustaphaDev/prestd-js-client/archive/main.tar.gz | tar -xz --strip-components=1
+curl -fsSL https://github.com/MoustaphaDev/prestd-api-client/archive/main.tar.gz | tar -xz --strip-components=1
 ```
 
 Replace `FULL_NAME`, `GITHUB_USER`, and `REPO_NAME` in the script below with your own details to personalize your new package:
@@ -37,7 +37,7 @@ Replace `FULL_NAME`, `GITHUB_USER`, and `REPO_NAME` in the script below with you
 FULL_NAME="John Smith"
 GITHUB_USER="johnsmith"
 REPO_NAME="my-cool-package"
-sed -i.mybak "s/MoustaphaDev/$GITHUB_USER/g; s/prestd-js-client\|prestd-js-client/$REPO_NAME/g; s/Moustapha Happy/$FULL_NAME/g" package.json package-lock.json README.md
+sed -i.mybak "s/MoustaphaDev/$GITHUB_USER/g; s/prestd-api-client\|prestd-api-client/$REPO_NAME/g; s/Moustapha Happy/$FULL_NAME/g" package.json package-lock.json README.md
 rm *.mybak
 ```
 
@@ -53,7 +53,7 @@ Enable the Codecov GitHub App [here](https://github.com/apps/codecov).
 
 ---
 
-# prestd-js-client
+# prestd-api-client
 
 [![npm package][npm-img]][npm-url]
 [![Build Status][build-img]][build-url]
@@ -68,13 +68,13 @@ Enable the Codecov GitHub App [here](https://github.com/apps/codecov).
 ## Install
 
 ```bash
-npm install prestd-js-client
+npm install prestd-api-client
 ```
 
 ## Usage
 
 ```ts
-import { myPackage } from 'prestd-js-client';
+import { myPackage } from 'prestd-api-client';
 
 myPackage('hello');
 //=> 'hello from my package'
@@ -101,16 +101,16 @@ Default: `rainbows`
 
 Lorem ipsum.
 
-[build-img]:https://github.com/MoustaphaDev/prestd-js-client/actions/workflows/release.yml/badge.svg
-[build-url]:https://github.com/MoustaphaDev/prestd-js-client/actions/workflows/release.yml
-[downloads-img]:https://img.shields.io/npm/dt/prestd-js-client
-[downloads-url]:https://www.npmtrends.com/prestd-js-client
-[npm-img]:https://img.shields.io/npm/v/prestd-js-client
-[npm-url]:https://www.npmjs.com/package/prestd-js-client
-[issues-img]:https://img.shields.io/github/issues/MoustaphaDev/prestd-js-client
-[issues-url]:https://github.com/MoustaphaDev/prestd-js-client/issues
-[codecov-img]:https://codecov.io/gh/MoustaphaDev/prestd-js-client/branch/main/graph/badge.svg
-[codecov-url]:https://codecov.io/gh/MoustaphaDev/prestd-js-client
+[build-img]:https://github.com/MoustaphaDev/prestd-api-client/actions/workflows/release.yml/badge.svg
+[build-url]:https://github.com/MoustaphaDev/prestd-api-client/actions/workflows/release.yml
+[downloads-img]:https://img.shields.io/npm/dt/prestd-api-client
+[downloads-url]:https://www.npmtrends.com/prestd-api-client
+[npm-img]:https://img.shields.io/npm/v/prestd-api-client
+[npm-url]:https://www.npmjs.com/package/prestd-api-client
+[issues-img]:https://img.shields.io/github/issues/MoustaphaDev/prestd-api-client
+[issues-url]:https://github.com/MoustaphaDev/prestd-api-client/issues
+[codecov-img]:https://codecov.io/gh/MoustaphaDev/prestd-api-client/branch/main/graph/badge.svg
+[codecov-url]:https://codecov.io/gh/MoustaphaDev/prestd-api-client
 [semantic-release-img]:https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-release-url]:https://github.com/semantic-release/semantic-release
 [commitizen-img]:https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
