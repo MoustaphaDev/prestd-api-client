@@ -21,11 +21,11 @@ describe('fetching an api enpoint', () => {
       () => process.env.CI === undefined || process.env.CI === 'false'
     );
 
-    api = new PrestApiClient<TableNames, ApiResources>(
-      process.env.PRESTD_API_BASE_URL as string,
-      process.env.PRESTD_API_DATABASE_NAME as string,
-      process.env.PRESTD_API_DATABASE_SCHEMA as string
-    );
+    api = new PrestApiClient<TableNames, ApiResources>({
+      prestdApiBaseUrl: process.env.PRESTD_API_BASE_URL as string,
+      schema: process.env.PRESTD_API_DATABASE_NAME as string,
+      databaseName: process.env.PRESTD_API_DATABASE_SCHEMA as string,
+    });
   });
 
   test('using getAll returns something', async () => {

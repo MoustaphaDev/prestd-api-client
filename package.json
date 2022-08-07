@@ -126,8 +126,5 @@
       "@semantic-release/npm",
       "@semantic-release/github"
     ]
-  },
-  "dependencies": {
-    "prestd-api-client": "^1.0.0"
   }
 }

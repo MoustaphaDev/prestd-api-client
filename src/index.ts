@@ -40,16 +40,21 @@ import type {
     },
   }
   ```
- */
+  */
 export class PrestApiClient<
   TableNames extends string,
   Resources extends { [k in TableNames]: Resources[TableNames] }
 > {
-  /**
-   * @param prestdApiBaseUrl The base url of the prest api
-   * @param schema The name of the schema you want to access
-   * @param databaseName The name of the database you want to access
+  prestdApiBaseUrl: string;
+  schema: string;
+  databaseName: string;
 
+  /**
+   * @param config The config object containing all the neecessary information to initialize the api client
+   * @param config.prestdApiBaseUrl The base url of the prest api
+   * @param config.schema The name of the schema you want to access
+   * @param config.databaseName The name of the database you want to access
+   *
    * - The generic at the first position `TableNames` is a union type containing the name of each table in the database you want to access.
    * - The generic at the second position `Resources` is a type which keys, named after each table in the database, map to the types of the resource contained in each of those tables.
    * 
@@ -84,13 +89,15 @@ export class PrestApiClient<
  */
 
   constructor(
-    private prestdApiBaseUrl: string,
-    private schema: string,
-    private databaseName: string
+    private config: {
+      prestdApiBaseUrl: string;
+      schema: string;
+      databaseName: string;
+    }
   ) {
-    this.prestdApiBaseUrl = prestdApiBaseUrl;
-    this.databaseName = databaseName;
-    this.schema = schema;
+    this.prestdApiBaseUrl = config.prestdApiBaseUrl;
+    this.databaseName = config.databaseName;
+    this.schema = config.schema;
   }
   /**
    * @param  tableName Represents the name of the table in the database you want to access.
