@@ -50,10 +50,6 @@ export class PrestApiClient<
   databaseName: string;
 
   /**
-   * @param config The config object containing all the neecessary information to initialize the api client
-   * @param config.prestdApiBaseUrl The base url of the prest api
-   * @param config.schema The name of the schema you want to access
-   * @param config.databaseName The name of the database you want to access
    *
    * - The generic at the first position `TableNames` is a union type containing the name of each table in the database you want to access.
    * - The generic at the second position `Resources` is a type which keys, named after each table in the database, map to the types of the resource contained in each of those tables.
@@ -86,12 +82,22 @@ export class PrestApiClient<
     },
   }
   ```
+  * @param config The config object containing all the neecessary information to initialize the api client
  */
 
   constructor(
     private config: {
+      /**
+       * @property The base url of the prest api
+       */
       prestdApiBaseUrl: string;
+      /**
+       * @property The name of the schema you want to access
+       */
       schema: string;
+      /**
+       * @property The name of the database you want to access
+       */
       databaseName: string;
     }
   ) {
@@ -100,7 +106,7 @@ export class PrestApiClient<
     this.schema = config.schema;
   }
   /**
-   * @param  tableName Represents the name of the table in the database you want to access.
+   * @param tableName Represents the name of the table in the database you want to access.
    * @returns A promise that resolves to the records in the table.
    */
   public async getAll<T>(
